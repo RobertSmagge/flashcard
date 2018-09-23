@@ -73,9 +73,9 @@ class CardController extends Controller
 
         if ($request->hasFile('afbeelding')) {
             $card->afbeelding = Input::file('afbeelding');
+        } else {
+            $card->afbeelding = $request->url;
         }
-
-        $card->afbeelding = $request->afbeelding;
 
         $set = Set::whereNaam($request->get('set'))->first();
         $order = $set->cards->count();
