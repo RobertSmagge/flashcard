@@ -96,10 +96,20 @@ class SetController extends Controller
             $order++;
         }
 
-        if ($order < 0 || $order >= $set->cards->count()) {
+        $sessionSet = session('set');
+        if (!$sessionSet || $sessionSet['id'] != $set->id) {
+            $sessionSet = [
+                'id'    => $set->id,
+                'cards' => $set->cards->shuffle(),
+            ];
+
+            session(['set' => $sessionSet]);
+        }
+
+        if ($order < 0 || $order >= $sessionSet['cards']->count()) {
             return redirect()->route('sets.show', [$set]);
         } else {
-            $card = $set->cards()->whereOrder($order)->first();
+            $card = $sessionSet['cards']->get($order);
 
             return view(
                 'card.present',

@@ -15,7 +15,7 @@
         </div>
         <div class="js-afbeelding">
             <a href="{{ route('sets.present', [$set, $order, $part+1]) }}">
-                <img src="{{ config('app.url') . '/public' . $card->afbeelding->medium->url }}" class="img-responsive center-block">
+                <img src="{{ $card->afbeelding->medium->url }}" class="img-responsive center-block">
             </a>
         </div>
         <h2 class="text-center">

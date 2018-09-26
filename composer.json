@@ -6,10 +6,10 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*",
-        "sahusoftcom/eloquent-image-mutator": "^2.1",
         "barryvdh/laravel-debugbar": "^2.2",
+        "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*",
+        "sahusoftcom/eloquent-image-mutator": "^2.2",
         "yajra/laravel-datatables-oracle": "6.*"
     },
     "require-dev": {
@@ -49,6 +49,7 @@
         ]
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "sort-packages": true
     }
 }

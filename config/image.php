@@ -2,7 +2,7 @@
 
 return array(
     'library'     => 'gd',
-    'upload_dir'  => 'storage/uploads',
+    'upload_dir'  => 'uploads',
     'assets_upload_path' => 'storage/app/public/uploads',
     'quality'     => 85,
     'dimensions'  => [

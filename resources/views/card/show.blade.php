@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
             <div>
-                <img src="{{ config('app.url') . '/public' . $card->afbeelding->large->url }}">
+                <img src="{{ $card->afbeelding->large->url }}">
             </div>
         </div>
     </div>

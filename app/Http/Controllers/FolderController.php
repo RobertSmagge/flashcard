@@ -106,7 +106,7 @@ class FolderController extends Controller
     public function addSet(Folder $folder)
     {
         return view('set.create', [
-            'folder' => $folder
+            'folder'  => $folder,
             'folders' => Folder::pluck('naam', 'id'),
         ]);
     }
