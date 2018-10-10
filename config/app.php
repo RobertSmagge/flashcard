@@ -153,6 +153,7 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         SahusoftCom\EloquentImageMutator\EloquentImageMutatorProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         /*
          * Application Service Providers...
